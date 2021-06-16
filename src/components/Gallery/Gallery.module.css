@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.list > li {
+  width: 350px;
+  border: 1px solid rgb(5, 5, 5);
+  margin-bottom: 30px;
+  transition: all 500ms linear;
+  box-shadow: none;
+  padding: 20px;
+}
+.list > li:hover {
+  box-shadow: 0 0 10px 10px black;
+}

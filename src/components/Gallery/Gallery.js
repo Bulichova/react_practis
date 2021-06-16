@@ -1,4 +1,6 @@
 import { Component } from 'react'
+import GalleryItem from '../GalleryItem/GalleryItem'
+import s from "./Gallery.module.css"
 class Gallery extends Component {
   state = { gallery: [] }
   async componentDidMount() {
@@ -14,18 +16,11 @@ class Gallery extends Component {
   render() {
     console.log(this.state.gallery)
     return (
-      <>
+      <ul className = {s.list}>
         {this.state.gallery.map((elem) => {
-          return (
-            <li key={elem.id}>
-              <img src={elem.image} width="200px" alt={elem.title} />
-              <h3>{elem.title}</h3>
-              <h4>{elem.price}</h4>
-              <p>{elem.category}</p>
-            </li>
-          )
+          return <GalleryItem elem={elem} key={elem.id} />
         })}
-      </>
+      </ul>
     )
   }
 }

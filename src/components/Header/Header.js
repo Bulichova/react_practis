@@ -1,8 +1,9 @@
+import s from "./Header.module.css"
 function Header() {
   return (
-    <>
-      <h1>Header</h1>
-      <ul>
+    <header className = {s.header}>
+      <h1 className = {s.title}>Header</h1>
+      <ul className = {s.ul}>
         <li>
           <a href="/home">HOME</a>
         </li>
@@ -13,7 +14,7 @@ function Header() {
           <a href="/contacts">CONTACTS</a>
         </li>
       </ul>
-    </>
+    </header>
   )
 }
 export default Header
